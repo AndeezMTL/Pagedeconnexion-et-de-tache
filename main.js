@@ -7,7 +7,8 @@
 const taskInput = document.getElementById("taskInput") ;
 const addTaskBtn = document.getElementById("addTaskBtn") ;
 const taskList = document.getElementById("taskList") ;
-
+var task = "task";
+var i = 0;
 addTaskBtn.addEventListener("click", addTask);
 
 function addTask() {
@@ -39,9 +40,11 @@ function addTask() {
     else {
         alert("Veuillez entrer une tâche valide.");
     }
+    
+   localStorage.setItem(task.concat(i), taskText);
+   i++;
+
 }
 
-function markTask(){
-const element =   document.replaceChild("","Terminer la tâche")
 
-}
+
